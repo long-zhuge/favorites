@@ -1,0 +1,60 @@
+.header {
+  height: 60px;
+  line-height: 0;
+  background: #fff;
+  padding: 0 20px;
+}
+
+.logo {
+  padding-top: 8px;
+
+  img {
+    width: 40px;
+    display: inline-block;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 20px;
+    color: #49a9ee;
+    margin: 0 0 0 15px;
+    position: relative;
+    top: 12px;
+    line-height: 1;
+  }
+
+  .line_wrapper {
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+
+  .line {
+    width: 12px;
+    height: 100%;
+    background: linear-gradient(90deg,rgba(24,144,255,0) 0,#1890ff);
+    animation: bannerTitleLine 3s ease-in-out 0s infinite;
+  }
+}
+
+.thanks {
+  padding-top: 14px;
+}
+
+.thanks_content {
+  text-align: center;
+
+  img {
+    width: 200px;
+  }
+}
+
+@keyframes bannerTitleLine {
+  0%, 25% {
+    transform: translateX(-30px);
+  }
+  75%, 100% {
+    transform: translateX(130px);
+  }
+}
