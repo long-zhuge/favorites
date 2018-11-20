@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
 import { HOME_NAMESPACE } from '../../actions/home';
 import styles from './List.less';
 
@@ -12,20 +11,21 @@ class List extends React.Component {
       return (
         <div className={styles.content_list}>
           {
-            data.map((item, index) => {
+            data.map((item) => {
               return (
-                <Link
+                <a
                   // eslint-disable-next-line
-                  key={index}
-                  to={item.url}
+                  key={item.url}
+                  href={item.url}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <p dangerouslySetInnerHTML={{ __html: item.title }} />
                   <p
                     className={styles.item_introduce}
                     dangerouslySetInnerHTML={{ __html: item.introduce }}
                   />
-                </Link>
+                </a>
               );
             })
           }
