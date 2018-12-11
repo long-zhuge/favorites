@@ -304,5 +304,9 @@
     "title": "TD-项目管理",
     "introduce": "TakingData 项目管理网站",
     "url": "https://jira.tendcloud.com"
+  }, {
+    "title": "react cropper",
+    "introduce": "react 版的图片剪裁",
+    "url": "https://github.com/DominicTobias/react-image-crop"
   }]
 }
