@@ -46,11 +46,6 @@ export default {
           });
         } else {
           dispatch({
-            type: 'GOTO',
-            payload: '/favorites/dist',
-          });
-
-          dispatch({
             type: 'ROUTER_ITEM',
             payload: routeData[0],
           });
