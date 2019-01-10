@@ -15,7 +15,7 @@ const data = [{
   children: [
     {
       name: 'home',
-      path: 'home',
+      path: '/favorites/index.html',
       component: Home,
     },
     {
