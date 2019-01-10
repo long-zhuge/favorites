@@ -20,22 +20,22 @@ const data = [{
     },
     {
       name: 'base64',
-      path: 'base64',
+      path: '/favorites/base64',
       component: Base64,
     },
     {
       name: 'qrcode',
-      path: 'qrcode',
+      path: '/favorites/qrcode',
       component: Qrcode,
     },
     {
       name: 'excel',
-      path: 'excel',
+      path: '/favorites/excel',
       component: Xlsx,
     },
     {
       name: 'love',
-      path: 'love',
+      path: '/favorites/love',
       component: Love,
     },
   ],

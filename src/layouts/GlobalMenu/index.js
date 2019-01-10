@@ -30,10 +30,10 @@ export default class GlobalMenu extends React.Component {
         selectedKeys={[menuKey]}
         mode="horizontal"
       >
-        <Menu.Item key="/favorites/dist">主页</Menu.Item>
-        <Menu.Item key="/base64">base64</Menu.Item>
-        {/*<Menu.Item key="/excel">excel</Menu.Item>*/}
-        <Menu.Item key="/qrcode">二维码</Menu.Item>
+        <Menu.Item key="/favorites/index.html">主页</Menu.Item>
+        <Menu.Item key="/favorites/base64">base64</Menu.Item>
+        {/*<Menu.Item key="/favorites/excel">excel</Menu.Item>*/}
+        <Menu.Item key="/favorites/qrcode">二维码</Menu.Item>
       </Menu>
     );
   }
