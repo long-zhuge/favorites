@@ -308,5 +308,9 @@
     "title": "WebStorm 破解注册码",
     "introduce": "需要修改 hosts 文件",
     "url": "http://idea.lanyus.com/"
+  }, {
+    "title": "travis ci",
+    "introduce": "配合 github pages 进行自动化构建",
+    "url": "https://www.travis-ci.org"
   }]
 }
