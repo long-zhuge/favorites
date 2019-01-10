@@ -6,6 +6,8 @@ import models from './models';
 import './polyfill';
 import './index.less';
 
+console.log(1);
+
 // 1. Initialize
 const app = dva({
   history: browserHistory(),
