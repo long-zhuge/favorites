@@ -22,6 +22,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   # 将 dist 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 dist 目录一起
   local_dir: dist
-  target_branch: hg-pages
+  target_branch: gh-pages
   on:
     branch: master
