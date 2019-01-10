@@ -1,3 +1,5 @@
+// git subtree push --prefix=dist origin gh-pages
+
 // 额外配置补充
 // const path = require('path');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
