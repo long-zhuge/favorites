@@ -24,9 +24,6 @@ function GlobalHeader(props) {
         <Col span={19}>
           <GlobalMenu routerItem={props.routerItem} />
         </Col>
-        <Col span={2}>
-          <Thanks />
-        </Col>
       </Row>
     </Layout.Header>
   );

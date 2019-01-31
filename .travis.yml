@@ -18,9 +18,9 @@ branches:
 deploy:
   provider: pages
   skip_cleanup: true
-  # 在项目仪表盘的 Settings -> Environment Variables 中配置
+  # 令牌秘钥，在主页面用户的 Setting 中创建
   github_token: $GITHUB_TOKEN
-  # 将 dist 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 dist 目录一起
+  # 将 dist 目录下的内容推送到默认的 gh-pages 分支上
   local_dir: dist
   target_branch: gh-pages
   on:

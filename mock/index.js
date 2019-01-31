@@ -1,5 +1,5 @@
 module.exports = {
-  'GET /favorites/dist/navList.json': (req, res) => {
+  'GET /favorites/navList.json': (req, res) => {
     setTimeout(() => {
       res.json({
         stat: 'ok',
