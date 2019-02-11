@@ -1,7 +1,6 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Input, Row, Col } from 'antd';
 import QRCode from 'qrcode.react';
-import styles from './index.less';
 
 class Qd extends React.Component {
   state = {
@@ -18,16 +17,18 @@ class Qd extends React.Component {
     const { value } = this.state;
 
     return (
-      <React.Fragment>
-        <Input
-          style={{ width: 200 }}
-          placeholder="输入内容生成二维码"
-          onPressEnter={this.handleQrcode}
-        />
-        <div className={styles.qrcode}>
+      <Row>
+        <Col span={12}>
+          <Input.TextArea
+            style={{ width: '65%', height: 200 }}
+            placeholder="输入内容生成二维码，回车后生成"
+            onPressEnter={this.handleQrcode}
+          />
+        </Col>
+        <Col span={12}>
           <QRCode value={value} size={200} />
-        </div>
-      </React.Fragment>
+        </Col>
+      </Row>
     );
   }
 }
