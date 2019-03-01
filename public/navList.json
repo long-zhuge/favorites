@@ -324,5 +324,13 @@
     "title": "nsfwjs（鉴黄）",
     "introduce": "一个简单的javascript库，帮助您快速识别不合适的图像；所有这些都在客户机的浏览器中。NSFWJS并不完美，但它相当准确（大约90%来自15000张测试图像的测试集）。它一直在变得更精确",
     "url": "https://github.com/infinitered/nsfwjs"
+  }, {
+    "title": "RY 禅道",
+    "introduce": "项目管理系统",
+    "url": "http://zbox.ryinfotech.com/zentao/user-login-L3plbnRhby8=.html"
+  }, {
+    "title": "RY 阿里邮箱",
+    "introduce": "就是一个邮箱",
+    "url": "http://mail.hichina.com"
   }]
 }
