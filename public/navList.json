@@ -332,5 +332,13 @@
     "title": "RY 阿里邮箱",
     "introduce": "就是一个邮箱",
     "url": "http://mail.hichina.com"
+  }, {
+    "title": "RY 官网",
+    "introduce": "睿轶官网",
+    "url": "http://www.ryinfotech.com/index"
+  }, {
+    "title": "google 学术镜像网",
+    "introduce": "仅供查资料使用，请忽查询敏感词",
+    "url": "http://ac.scmor.com/"
   }]
 }
