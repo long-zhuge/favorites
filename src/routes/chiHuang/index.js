@@ -28,7 +28,11 @@ class ChiHuang extends React.PureComponent {
       });
     } else {
       this.setState({ loading: true }, () => {
-        nsfwjs.load('/model/').then((model) => {
+        /*
+        * dev：/model/
+        * publish：/favorites/model/
+        * */
+        nsfwjs.load('/favorites/model/').then((model) => {
           window.nsfwModel = model;
           this.setState({
             nsfwModel: model,
