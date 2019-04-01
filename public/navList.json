@@ -324,5 +324,9 @@
     "title": "antd color",
     "introduce": "Colors",
     "url": "https://ant.design/docs/spec/colors"
+  }, {
+    "title": "RY CRM",
+    "introduce": "vtiger crm",
+    "url": "http://crm.ryinfotech.com/"
   }]
 }
