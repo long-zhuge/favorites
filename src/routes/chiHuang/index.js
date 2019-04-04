@@ -32,7 +32,7 @@ class ChiHuang extends React.PureComponent {
         * dev：/model/
         * publish：/favorites/model/
         * */
-        nsfwjs.load('/favorites/model/').then((model) => {
+        nsfwjs.load('/model/').then((model) => {
           window.nsfwModel = model;
           this.setState({
             nsfwModel: model,

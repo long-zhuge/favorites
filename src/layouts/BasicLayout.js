@@ -3,34 +3,11 @@ import { connect } from 'dva';
 import { Layout } from 'antd';
 import DocumentTitle from 'react-document-title';
 import { Route } from 'dva/router';
-import { ContainerQuery } from 'react-container-query';
-import classNames from 'classnames';
 import { GLOBAL_TITLE } from '../actions';
 import GlobalHeader from './GlobalHeader';
 import ErrorBoundary from '../components/ErrorBoundary';
 import TheDay from '../components/TheDay';
 import styles from './BasicLayout.less';
-
-const query = {
-  'screen-xs': {
-    maxWidth: 575,
-  },
-  'screen-sm': {
-    minWidth: 576,
-    maxWidth: 767,
-  },
-  'screen-md': {
-    minWidth: 768,
-    maxWidth: 991,
-  },
-  'screen-lg': {
-    minWidth: 992,
-    maxWidth: 1199,
-  },
-  'screen-xl': {
-    minWidth: 1200,
-  },
-};
 
 class BasicLayout extends React.PureComponent {
   render() {
@@ -54,9 +31,7 @@ class BasicLayout extends React.PureComponent {
 
     return (
       <DocumentTitle title={GLOBAL_TITLE}>
-        <ContainerQuery query={query}>
-          {params => <div className={classNames(params)}>{layout}</div>}
-        </ContainerQuery>
+        <div>{layout}</div>
       </DocumentTitle>
     );
   }

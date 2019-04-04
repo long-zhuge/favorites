@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
+import { Row, Col } from 'antd';
 import { HOME_NAMESPACE } from '../../actions/home';
 import styles from './List.less';
 
@@ -9,11 +10,12 @@ class List extends React.Component {
 
     if (data.length > 0) {
       return (
-        <div className={styles.content_list}>
+        <Row className={styles.itemList} gutter={8}>
           {
-            data.map((item) => {
-              return (
+            data.map(item => (
+              <Col span={8} key={item.url}>
                 <a
+                  className={styles.item}
                   // eslint-disable-next-line
                   key={item.url}
                   href={item.url}
@@ -26,10 +28,10 @@ class List extends React.Component {
                     dangerouslySetInnerHTML={{ __html: item.introduce }}
                   />
                 </a>
-              );
-            })
+              </Col>
+            ))
           }
-        </div>
+        </Row>
       );
     }
 
