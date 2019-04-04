@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FAVORITES</title>
+  <!--<link rel="icon" href="./assets/favicon.ico" type="image/x-icon">-->
+  <!--<script src="./xlsx.js"></script>-->
+  <script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+<link href="./index.ef693b37.css" rel="stylesheet"></head>
+<body>
+<div id="root"></div>
+<script type="text/javascript" src="./index.6c8ee961.js"></script></body>
+</html>
