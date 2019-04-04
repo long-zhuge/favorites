@@ -34,6 +34,7 @@ class ChiHuang extends React.PureComponent {
         * */
         const hostname = location.hostname;
         const modelUrl = (hostname === 'localhost' || '127.0.0.1') ? '/model/' : '/favorites/model/';
+        console.log(modelUrl);
         nsfwjs.load(modelUrl).then((model) => {
           window.nsfwModel = model;
           this.setState({
