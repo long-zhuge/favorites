@@ -26,7 +26,7 @@ const data = [{
       name: 'qrcode',
       path: '/favorites/qrcode',
       component: Qrcode,
-    }, {
+    },/* {
       name: 'excel',
       path: '/favorites/excel',
       component: Xlsx,
@@ -38,7 +38,7 @@ const data = [{
       name: 'chiHuang',
       path: '/favorites/chiHuang',
       component: ChiHuang,
-    },
+    },*/
   ],
 }];
 
