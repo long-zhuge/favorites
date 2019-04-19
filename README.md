@@ -33,3 +33,10 @@ $ cnpm start
 |—— .roadhogrc.mock.js  // mock 配置
 |—— package.json	// 包配置
 ```
+
+#### 鉴黄插件
+
+```
+"@tensorflow/tfjs": "0.15.1",
+"nsfwjs": "0.1.1",
+```

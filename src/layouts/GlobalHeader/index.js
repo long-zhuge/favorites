@@ -6,7 +6,7 @@ import React from 'react';
 import { Layout, Row, Col } from 'antd';
 import { GLOBAL_TITLE } from '../../actions';
 import GlobalMenu from '../GlobalMenu';
-import Thanks from './Thanks';
+// import Thanks from './Thanks';
 import styles from './index.less';
 
 function GlobalHeader(props) {

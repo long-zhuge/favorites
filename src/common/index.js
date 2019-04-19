@@ -4,9 +4,9 @@ import BasicLayout from '../layouts/BasicLayout';
 import Home from '../routes/home';
 import Base64 from '../routes/base64';
 import Qrcode from '../routes/qrcode';
-import Xlsx from '../routes/excel';
-import ChiHuang from '../routes/chiHuang';
-import Love from '../routes/love';
+// import Xlsx from '../routes/excel';
+// import ChiHuang from '../routes/chiHuang';
+// import Love from '../routes/love';
 
 const data = [{
   component: BasicLayout,
