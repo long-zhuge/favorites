@@ -4,6 +4,7 @@ import BasicLayout from '../layouts/BasicLayout';
 import Home from '../routes/home';
 import Base64 from '../routes/base64';
 import Qrcode from '../routes/qrcode';
+import Json from '../routes/json';
 // import Xlsx from '../routes/excel';
 // import ChiHuang from '../routes/chiHuang';
 // import Love from '../routes/love';
@@ -26,6 +27,10 @@ const data = [{
       name: 'qrcode',
       path: '/favorites/qrcode',
       component: Qrcode,
+    }, {
+      name: 'json',
+      path: '/favorites/json',
+      component: Json,
     },/* {
       name: 'excel',
       path: '/favorites/excel',
