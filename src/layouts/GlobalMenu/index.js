@@ -35,6 +35,7 @@ export default class GlobalMenu extends React.Component {
         {/*<Menu.Item key="/favorites/excel">excel</Menu.Item>*/}
         <Menu.Item key="/favorites/qrcode">二维码</Menu.Item>
         <Menu.Item key="/favorites/json">json</Menu.Item>
+        {/*<Menu.Item key="/favorites/markdown">markdown</Menu.Item>*/}
         {/*<Menu.Item key="/favorites/chiHuang">图片鉴黄</Menu.Item>*/}
       </Menu>
     );

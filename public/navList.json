@@ -336,5 +336,9 @@
     "title": "API管理平台",
     "introduce": "完全开源、免费的API协作管理系统",
     "url": "http://api.crap.cn/"
+  }, {
+    "title": "HOMEBREW",
+    "introduce": "macOs 软件包管理",
+    "url": "https://brew.sh/index_zh-cn"
   }]
 }

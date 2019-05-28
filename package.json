@@ -26,6 +26,7 @@
     "core-js": "^2.5.1",
     "dva": "^2.1.0",
     "dva-loading": "^1.0.4",
+    "highlight.js": "^9.15.6",
     "lodash": "^4.17.4",
     "lodash-decorators": "^4.4.1",
     "lodash.clonedeep": "^4.5.0",
@@ -37,7 +38,8 @@
     "react-container-query": "^0.9.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.0.0",
-    "react-fittext": "^1.0.0"
+    "react-fittext": "^1.0.0",
+    "react-markdown": "4.0.8"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",

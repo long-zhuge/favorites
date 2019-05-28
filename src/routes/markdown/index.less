@@ -1,0 +1,30 @@
+.box {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding-top: 20px;
+}
+
+.left {
+  flex: 0 0 50%;
+  border-right: solid 2px #e5ebee;
+
+  textarea {
+    height: 100%;
+    display: block;
+    border: 0;
+    border-radius: 0;
+    resize: none;
+    outline: none;
+    width: 100%;
+    overflow: auto;
+    padding: 4px;
+    background-color: #272822;
+    color: #fff;
+  }
+}
+
+.right {
+  flex: auto;
+  padding: 4px;
+}
