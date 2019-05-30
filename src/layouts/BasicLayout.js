@@ -7,6 +7,7 @@ import { GLOBAL_TITLE } from '../actions';
 import GlobalHeader from './GlobalHeader';
 import ErrorBoundary from '../components/ErrorBoundary';
 import TheDay from '../components/TheDay';
+import BgMusic from '../components/BgMusic';
 import styles from './BasicLayout.less';
 
 class BasicLayout extends React.PureComponent {
@@ -15,6 +16,7 @@ class BasicLayout extends React.PureComponent {
 
     const layout = (
       <Layout className={styles.box}>
+        <BgMusic />
         <GlobalHeader routerItem={routerItem} />
         <TheDay />
         <ErrorBoundary>

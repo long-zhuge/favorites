@@ -340,5 +340,17 @@
     "title": "HOMEBREW",
     "introduce": "macOs 软件包管理",
     "url": "https://brew.sh/index_zh-cn"
+  }, {
+    "title": "bookset",
+    "introduce": "精品电子书，而且还是免费下载",
+    "url": "https://bookset.me"
+  }, {
+    "title": "临时邮箱",
+    "introduce": "填写邮箱时候，不想使用您的真实邮箱？那就使用24mail.chacuo.net 临时邮箱。不需要注册，邮箱持续24小时",
+    "url": "http://24mail.chacuo.net/"
+  }, {
+    "title": "在线工具集",
+    "introduce": "各种各样的小工具，如PDF转化、JSON转化、Linux常用命令等等",
+    "url": "https://www.toolfk.com/"
   }]
 }
