@@ -5,10 +5,11 @@ import Home from '../routes/home';
 import Base64 from '../routes/base64';
 import Qrcode from '../routes/qrcode';
 import Json from '../routes/json';
-import Md from '../routes/markdown';
+// import Md from '../routes/markdown';
 // import Xlsx from '../routes/excel';
 // import ChiHuang from '../routes/chiHuang';
-// import Love from '../routes/love';
+import Love from '../routes/love';
+// import Video from '../routes/mediaDevices';
 
 const data = [{
   component: BasicLayout,
@@ -32,7 +33,15 @@ const data = [{
       name: 'json',
       path: '/favorites/json',
       component: Json,
-    },/* {
+    }, {
+      name: 'love',
+      path: '/favorites/love',
+      component: Love,
+    }, /*{
+      name: 'video',
+      path: '/favorites/video',
+      component: Video,
+    },*/ /* {
       name: 'markdown',
       path: '/favorites/markdown',
       component: Md,
@@ -40,11 +49,7 @@ const data = [{
       name: 'excel',
       path: '/favorites/excel',
       component: Xlsx,
-    }, {
-      name: 'love',
-      path: '/favorites/love',
-      component: Love,
-    }, {
+    },{
       name: 'chiHuang',
       path: '/favorites/chiHuang',
       component: ChiHuang,
