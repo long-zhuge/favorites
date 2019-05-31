@@ -352,5 +352,9 @@
     "title": "在线工具集",
     "introduce": "各种各样的小工具，如PDF转化、JSON转化、Linux常用命令等等",
     "url": "https://www.toolfk.com/"
+  }, {
+    "title": "chrome插件网",
+    "introduce": "网络被强？试试这个吧。。",
+    "url": "http://www.cnplugins.com/"
   }]
 }
