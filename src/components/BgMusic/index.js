@@ -5,22 +5,17 @@ import styles from './index.less';
 export default class BgMusic extends React.PureComponent {
   state = {
     play: false,
-    audioDom: null,
   };
 
-  componentDidMount() {
-    this.setState({
-      audioDom: document.getElementById('bg_music_audio'),
-    });
-  }
+  componentDidMount() {}
 
   onPlay = () => {
-    const { play, audioDom } = this.state;
+    const { play } = this.state;
 
     if (play) {
-      audioDom.pause();
+      this.refs.audio.pause();
     } else {
-      audioDom.play();
+      this.refs.audio.play();
     }
     this.setState({ play: !play });
   };
@@ -34,7 +29,7 @@ export default class BgMusic extends React.PureComponent {
           className={styles.bg_music_icon}
           type={play ? 'pause-circle' : 'play-circle'}
         />
-        <audio loop="loop" hidden id="bg_music_audio">
+        <audio loop="loop" hidden ref="audio">
           <source src="./rain.mp4" type="audio/mp4" />
         </audio>
       </div>
