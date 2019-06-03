@@ -133,8 +133,6 @@ class Xlsx extends React.Component {
 
     const excel = jsonToExcel(filterData);
 
-    debugger
-
     if (excel) {
       const a = document.createElement("a");
       a.href = `data:application/vnd.ms-excel;charset=utf-8,${encodeURIComponent(excel)}`;
