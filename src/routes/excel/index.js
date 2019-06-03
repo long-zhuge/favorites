@@ -3,7 +3,12 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Button, message } from 'antd';
+import jsonToExcel from './jsonToExcel';
 import styles from '../base64/index.less';
+
+function removeAllSpace(str = '') {
+  return str.replace(/\r\n/g, '').replace(/\n/g, '').replace(/\s/g, '');
+}
 
 class Xlsx extends React.Component {
   state = {
@@ -33,10 +38,14 @@ class Xlsx extends React.Component {
         }
         // wb.SheetNames[0]是获取Sheets中第一个Sheet的名字
         // wb.Sheets[Sheet名]获取第一个Sheet的数据
-        that.setState({
-          // TODO: 可以将多个 Sheet 进行分离
-          text: JSON.stringify(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]])),
+        const textToJson = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+
+        // 遍历去除空格和回车符，主要是字段4中
+        textToJson.forEach(item => {
+          item['字段4'] = removeAllSpace(item['字段4']);
         });
+
+        that.setState({ text: JSON.stringify(textToJson) });
       };
       if (rABS) {
         reader.readAsArrayBuffer(file);
@@ -83,6 +92,60 @@ class Xlsx extends React.Component {
     e.preventDefault();
   };
 
+  // 清洗数据逻辑
+  download = () => {
+    const { text } = this.state;
+    const data = JSON.parse(text);
+    const filterData = [];
+
+    data.forEach(item => {
+      // 当存在标题时
+      if (item['字段1'].length > 0) {
+        // 清洗字段4
+        const field4 = item['字段4']
+          .replace('发布日期：', ',发布日期：')
+          .replace('失效/废止日期：', ',失效/废止日期：')
+          .replace('发布文号：', ',发布文号：')
+          .replace('实施日期：', ',实施日期：')
+          .replace('状态：', ',状态：')
+          .replace('备注：', ',备注：');
+        const arr = field4.split(',');
+
+
+        // 组装数据
+        filterData.push({
+          title: item['字段1'],
+          source: item['字段2'],
+          sourceUrl: item['字段2_link'],
+          updateDate: item['字段2_link'].length > 0 ? item['字段3'] : item['字段7'],
+          place: item['字段6'],
+          placeType: item['字段6'].includes('国家') ? 1 : 0,
+          publishUnit: arr[0].replace('发布单位：', ''),
+          publishDate: arr[1].replace('发布日期：', ''),
+          invalidDate: arr[2].replace('失效/废止日期：', ''),
+          publishNumber: arr[3].replace('发布文号：', ''),
+          implementDate: arr[4].replace('实施日期：', ''),
+          status: arr[5].replace('状态：', ''),
+          remarks: arr[6].replace('备注：', ''),
+        });
+      }
+    });
+
+    const excel = jsonToExcel(filterData);
+
+    debugger
+
+    if (excel) {
+      const a = document.createElement("a");
+      a.href = `data:application/vnd.ms-excel;charset=utf-8,${encodeURIComponent(excel)}`;
+      a.download = '法律法规.xls';
+      a.click();
+      a.remove();
+    } else {
+      alert('无数据可转化');
+    }
+  };
+
   render() {
     const { text } = this.state;
 
@@ -98,6 +161,8 @@ class Xlsx extends React.Component {
             </Button>
             &nbsp;&nbsp;
             <Button onClick={this.onCopy} disabled={text === ''}>复制</Button>
+            &nbsp;&nbsp;
+            <Button onClick={this.download} disabled={text === ''}>下载excel</Button>
             <input id="file" className="hidden" type="file" onChange={this.onChange} />
           </div>
           <div>功能介绍：可将 excel 文件序列化成 JSON 格式数据。但只能转化第一个 sheet，如果需要，可将其他 sheet 移动至第一个后，再进行转化。</div>

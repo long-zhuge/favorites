@@ -6,7 +6,7 @@ import Base64 from '../routes/base64';
 import Qrcode from '../routes/qrcode';
 import Json from '../routes/json';
 // import Md from '../routes/markdown';
-// import Xlsx from '../routes/excel';
+import Xlsx from '../routes/excel';
 // import ChiHuang from '../routes/chiHuang';
 import Love from '../routes/love';
 // import Video from '../routes/mediaDevices';
@@ -45,11 +45,11 @@ const data = [{
       name: 'markdown',
       path: '/favorites/markdown',
       component: Md,
-    },*//* {
+    },*/ {
       name: 'excel',
       path: '/favorites/excel',
       component: Xlsx,
-    },{
+    }, /*{
       name: 'chiHuang',
       path: '/favorites/chiHuang',
       component: ChiHuang,
