@@ -98,6 +98,14 @@ class Xlsx extends React.Component {
     const data = JSON.parse(text);
     const filterData = [];
 
+    const dataReplace = (str) => {
+      if (str && str.length > 0) {
+        return str.replace(/-/g, '*');
+      }
+
+      return '';
+    };
+
     data.forEach(item => {
       // 当存在标题时
       if (item['字段1'].length > 0) {
@@ -111,20 +119,24 @@ class Xlsx extends React.Component {
           .replace('备注：', ',备注：');
         const arr = field4.split(',');
 
+        const updateDate = item['字段2_link'].length > 0 ? item['字段3'] : item['字段7'];
+        const publishDate = arr[1].replace('发布日期：', '');
+        const invalidDate = arr[2].replace('失效/废止日期：', '');
+        const implementDate = arr[4].replace('实施日期：', '');
 
         // 组装数据
         filterData.push({
           title: item['字段1'],
           source: item['字段2'],
           sourceUrl: item['字段2_link'],
-          updateDate: item['字段2_link'].length > 0 ? item['字段3'] : item['字段7'],
+          updateDate: dataReplace(updateDate),
           place: item['字段6'],
           placeType: item['字段6'].includes('国家') ? 1 : 0,
           publishUnit: arr[0].replace('发布单位：', ''),
-          publishDate: arr[1].replace('发布日期：', ''),
-          invalidDate: arr[2].replace('失效/废止日期：', ''),
+          publishDate: dataReplace(publishDate),
+          invalidDate: dataReplace(invalidDate),
           publishNumber: arr[3].replace('发布文号：', ''),
-          implementDate: arr[4].replace('实施日期：', ''),
+          implementDate: dataReplace(implementDate),
           status: arr[5].replace('状态：', ''),
           remarks: arr[6].replace('备注：', ''),
         });
@@ -135,8 +147,8 @@ class Xlsx extends React.Component {
 
     if (excel) {
       const a = document.createElement("a");
-      a.href = `data:application/vnd.ms-excel;charset=utf-8,${encodeURIComponent(excel)}`;
-      a.download = '法律法规.xls';
+      a.href = `data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8,${encodeURIComponent(excel)}`;
+      a.download = '法律法规(转化后).xls';
       a.click();
       a.remove();
     } else {
