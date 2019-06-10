@@ -98,6 +98,7 @@ class Xlsx extends React.Component {
     const data = JSON.parse(text);
     const filterData = [];
 
+    // 由于 yyyy-mm-dd 的字符串转化成 excel 时自动会变成日期格式，故需要替换下字符串。而后excel再使用公式进行替换
     const dataReplace = (str) => {
       if (str && str.length > 0) {
         return str.replace(/-/g, '*');
@@ -119,24 +120,24 @@ class Xlsx extends React.Component {
           .replace('备注：', ',备注：');
         const arr = field4.split(',');
 
-        const updateDate = item['字段2_link'].length > 0 ? item['字段3'] : item['字段7'];
-        const publishDate = arr[1].replace('发布日期：', '');
-        const invalidDate = arr[2].replace('失效/废止日期：', '');
-        const implementDate = arr[4].replace('实施日期：', '');
+        const update_date = item['字段2_link'].length > 0 ? item['字段3'] : item['字段7'];
+        const publish_date = arr[1].replace('发布日期：', '');
+        const invalid_date = arr[2].replace('失效/废止日期：', '');
+        const implement_date = arr[4].replace('实施日期：', '');
 
         // 组装数据
         filterData.push({
           title: item['字段1'],
           source: item['字段2'],
-          sourceUrl: item['字段2_link'],
-          updateDate: dataReplace(updateDate),
+          source_url: item['字段2_link'],
+          update_date: dataReplace(update_date),
           place: item['字段6'],
-          placeType: item['字段6'].includes('国家') ? 1 : 0,
-          publishUnit: arr[0].replace('发布单位：', ''),
-          publishDate: dataReplace(publishDate),
-          invalidDate: dataReplace(invalidDate),
-          publishNumber: arr[3].replace('发布文号：', ''),
-          implementDate: dataReplace(implementDate),
+          place_type: item['字段6'].includes('国家') ? 1 : 0,
+          publish_unit: arr[0].replace('发布单位：', ''),
+          publish_date: dataReplace(publish_date),
+          invalid_date: dataReplace(invalid_date),
+          publish_number: arr[3].replace('发布文号：', ''),
+          implement_date: dataReplace(implement_date),
           status: arr[5].replace('状态：', ''),
           remarks: arr[6].replace('备注：', ''),
         });
