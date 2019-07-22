@@ -341,9 +341,13 @@
     "introduce": "macOs 软件包管理",
     "url": "https://brew.sh/index_zh-cn"
   }, {
-    "title": "bookset",
+    "title": "mebook",
     "introduce": "精品电子书，而且还是免费下载",
-    "url": "https://bookset.me"
+    "url": "http://mebook.cc"
+  }, {
+    "title": "sobooks",
+    "introduce": "精品电子书，而且还是免费下载",
+    "url": "https://sobooks.cc/"
   }, {
     "title": "临时邮箱",
     "introduce": "填写邮箱时候，不想使用您的真实邮箱？那就使用24mail.chacuo.net 临时邮箱。不需要注册，邮箱持续24小时",
