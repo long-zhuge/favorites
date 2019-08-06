@@ -360,5 +360,9 @@
     "title": "chrome插件网",
     "introduce": "网络被强？试试这个吧。。",
     "url": "http://www.cnplugins.com/"
+  }, {
+    "title": "gitlab部署",
+    "introduce": "私有化部署教程",
+    "url": "https://www.jianshu.com/p/b04356e014fa"
   }]
 }
