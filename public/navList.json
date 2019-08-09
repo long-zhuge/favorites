@@ -364,5 +364,9 @@
     "title": "gitlab部署",
     "introduce": "私有化部署教程",
     "url": "https://www.jianshu.com/p/b04356e014fa"
+  }, {
+    "title": "webpack-大漠",
+    "introduce": "@大漠 的实战文章，介绍17步了解配置",
+    "url": "https://www.w3cplus.com/javascript/webpack-config-part1.html"
   }]
 }
