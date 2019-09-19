@@ -121,10 +121,6 @@
     "introduce": "我们的项目仓库。。。",
     "url": "http://github.abssqr.cn/explore/projects"
   }, {
-    "title": "杭州决对信息科技有公司",
-    "introduce": "abs绝对值，专业资产证券化三方服务商，专注于资产证券化信息咨询与技术服务，致力于提供专业高效方便快捷的解决方案，竭力打造资产证券化领先服务平台，依靠强大的技术实力和创新能力为资产证券化交易方提供最优价值。",
-    "url": "https://www.abssqr.com"
-  }, {
     "title": "Nunjuck",
     "introduce": "A rich and powerful templating language for JavaScript",
     "url": "https://mozilla.github.io/nunjucks/"
@@ -152,10 +148,6 @@
     "title": "iconfont",
     "introduce": "阿里妈妈MUX倾力打造的矢量图标管理、交流平台。",
     "url": "http://www.iconfont.cn/"
-  }, {
-    "title": "ABS 配置中心",
-    "introduce": "@付盼星，服务器配置等问题找他就行。功能：部署代码(bushudaima)、项目管理、文档中心等。。。",
-    "url": "http://portal.abssqr.cn/"
   }, {
     "title": "dva",
     "introduce": "基于 redux、redux-saga 和 react-router 的轻量级前端框架，作者@sorrycc",
@@ -192,10 +184,6 @@
     "title": "Canvas 学习",
     "introduce": "别人家的笔记",
     "url": "http://www.cnblogs.com/chengduxiaoc/p/7649048.html"
-  }, {
-    "title": "TD邮箱",
-    "introduce": "就是一个邮箱",
-    "url": "https://outlook.office.com/"
   }, {
     "title": "Charles 调试手机数据请求",
     "introduce": "以前使用 Fiddler 进行 web 调试的时候，可以玩转线上各种数据请求，并且替换掉数据，本地改改就可以调试线上内容了。那时候我应该还在大学里，用的是 window 和 firefox，需要兼容像  IE 6 这样的顽固浏览器。",
@@ -289,18 +277,6 @@
     "introduce": "一个简单的javascript库，帮助您快速识别不合适的图像；所有这些都在客户机的浏览器中。NSFWJS并不完美，但它相当准确（大约90%来自15000张测试图像的测试集）。它一直在变得更精确",
     "url": "https://github.com/infinitered/nsfwjs"
   }, {
-    "title": "RY 禅道",
-    "introduce": "项目管理系统",
-    "url": "http://zbox.ryinfotech.com/zentao/user-login-L3plbnRhby8=.html"
-  }, {
-    "title": "RY 阿里邮箱",
-    "introduce": "就是一个邮箱",
-    "url": "http://mail.hichina.com"
-  }, {
-    "title": "RY 官网",
-    "introduce": "睿轶官网",
-    "url": "http://www.ryinfotech.com/index"
-  }, {
     "title": "google 学术镜像网",
     "introduce": "仅供查资料使用，请忽查询敏感词",
     "url": "http://ac.scmor.com/"
@@ -313,17 +289,9 @@
     "introduce": "Colors",
     "url": "https://ant.design/docs/spec/colors"
   }, {
-    "title": "RY CRM",
-    "introduce": "vtiger crm",
-    "url": "http://crm.ryinfotech.com/"
-  }, {
     "title": "flow chart",
     "introduce": "免费的流程图制作网站",
     "url": "https://www.processon.com/"
-  }, {
-    "title": "RY gitlab",
-    "introduce": "ry的代码仓库",
-    "url": "http://125.124.58.235/"
   }, {
     "title": "react markdown",
     "introduce": "Renders Markdown as pure React components.",
