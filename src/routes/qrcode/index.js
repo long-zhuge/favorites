@@ -36,8 +36,8 @@ class Qd extends React.Component {
         <Col span={12}>
           <Input.TextArea
             style={{ width: '80%', height: 200 }}
-            placeholder="输入内容生成二维码，回车后生成"
-            onPressEnter={this.handleQrcode}
+            placeholder="输入内容生成二维码"
+            onChange={this.handleQrcode}
           />
         </Col>
         <Col span={12}>
