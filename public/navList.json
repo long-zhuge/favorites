@@ -340,5 +340,9 @@
     "title": "td-antd",
     "introduce": "基于 ant design 二次开发的组件",
     "url": "https://long-zhuge.github.io/td-antd/"
+  }, {
+    "title": "微信开发者文档",
+    "introduce": "微信公众平台是运营者通过公众号为微信用户提供资讯和服务的平台，而公众平台开发接口则是提供服务的基础，开发者在公众平台网站中创建公众号、获取接口权限后，可以通过阅读本接口文档来帮助开发。",
+    "url": "https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html"
   }]
 }
