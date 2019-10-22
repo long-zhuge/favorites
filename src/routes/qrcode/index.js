@@ -1,6 +1,11 @@
+/*
+* TODO: 增加 logo 功能，45*45大小，利用 canvas 将两张图片进行合成。
+* */
+
 import React from 'react';
-import { Input, Row, Col, Button, Tag } from 'antd';
+import { Input, Button, Tag } from 'antd';
 import QRCode from 'qrcode.react';
+import SeniorEdit from './components/SeniorEdit';
 import styles from './index.less';
 
 const QR_CODE = 'qrcode';
@@ -37,6 +42,11 @@ class Qd extends React.PureComponent {
   // 将值写入到 state 中
   handleQrcode = (e) => {
     const { value } = e.target;
+
+    // 如果输入框为空时，则清空二维码图片
+    if (value === '') {
+      this.setState({ src: '' });
+    }
     this.setState({ value });
   };
 
@@ -89,8 +99,9 @@ class Qd extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Row>
-          <Col span={12}>
+        <div className={styles.container}>
+          <div className={styles.input}>
+            <SeniorEdit />
             <Input.TextArea
               value={value}
               placeholder="请输入内容"
@@ -98,17 +109,20 @@ class Qd extends React.PureComponent {
               onChange={this.handleQrcode}
             />
             <div className={styles.btn_box}>
-              <Button disabled={value === ''} size="small" onClick={this.create}>生成</Button>
+              <Button disabled={value === ''} type="primary" onClick={this.create}>生成</Button>
             </div>
-          </Col>
-          <Col span={12}>
-            <img className={styles.img} src={src} alt="" />
-            <QRCode className="hidden" id="canvas" value={value} size={200} />
-          </Col>
-        </Row>
+          </div>
+          <div className={styles.output}>
+            {src ?
+              <img className={styles.img} src={src} /> :
+              <div className={styles.noImg}>此处生成二维码</div>
+            }
+          </div>
+        </div>
         <div className={styles.history}>
           历史记录：{this.renderTag()}
         </div>
+        <QRCode className="hidden" id="canvas" value={value} size={200} />
       </React.Fragment>
     );
   }

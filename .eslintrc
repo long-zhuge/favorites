@@ -46,7 +46,8 @@
     "require-yield": [1],
     "prefer-destructuring": [0],
     "react/sort-comp": [0],
-    "object-shorthand": [0]
+    "object-shorthand": [0],
+    "jsx-a11y/alt-text": [0]
   },
   "parserOptions": {
     "ecmaFeatures": {
