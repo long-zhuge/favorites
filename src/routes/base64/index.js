@@ -52,12 +52,7 @@ class Base64 extends React.Component {
       <React.Fragment>
         <div className={styles.base64_submit}>
           <div>
-            <Button>
-              {
-                // eslint-disable-next-line
-                <label htmlFor="file">提交转化</label>
-              }
-            </Button>
+            <Button><label htmlFor="file">提交转化</label></Button>
             &nbsp;&nbsp;
             <Button onClick={this.onCopy} disabled={text === ''}>复制</Button>
             <input id="file" className="hidden" type="file" onChange={this.onChange} />

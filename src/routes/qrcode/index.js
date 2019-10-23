@@ -5,7 +5,7 @@
 import React from 'react';
 import { Input, Button, Tag } from 'antd';
 import QRCode from 'qrcode.react';
-import SeniorEdit from './components/SeniorEdit';
+// import SeniorEdit from './components/SeniorEdit';
 import styles from './index.less';
 
 const QR_CODE = 'qrcode';
@@ -101,7 +101,6 @@ class Qd extends React.PureComponent {
       <React.Fragment>
         <div className={styles.container}>
           <div className={styles.input}>
-            <SeniorEdit />
             <Input.TextArea
               value={value}
               placeholder="请输入内容"
