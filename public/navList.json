@@ -337,11 +337,11 @@
     "introduce": "基于 ant design 二次开发的组件",
     "url": "https://long-zhuge.github.io/td-antd/"
   }, {
-    "title": "微信开发者文档",
+    "title": "wx：微信开发者文档",
     "introduce": "微信（wx）",
     "url": "https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html"
   }, {
-    "title": "微信公众号平台",
+    "title": "wx：微信公众号平台",
     "introduce": "微信（wx）",
     "url": "https://mp.weixin.qq.com/"
   }, {
@@ -360,5 +360,13 @@
     "title": "现代 JavaScript 教程",
     "introduce": "以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。",
     "url": "https://zh.javascript.info"
+  }, {
+    "title": "wx：iView Weapp",
+    "introduce": "一套高质量的微信小程序 UI 组件库",
+    "url": "http://inmap.talkingdata.com/wx/index_prod.html"
+  }, {
+    "title": "wx：微信图表，CHCharts",
+    "introduce": "一款用于微信小程序开发中的图表组件，使用者可以快速添加并集成到微信小程序开发中",
+    "url": "https://github.com/chmini-app/CHCharts-wechat"
   }]
 }
