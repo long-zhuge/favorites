@@ -368,5 +368,13 @@
     "title": "wx：微信图表，CHCharts",
     "introduce": "一款用于微信小程序开发中的图表组件，使用者可以快速添加并集成到微信小程序开发中",
     "url": "https://github.com/chmini-app/CHCharts-wechat"
+  }, {
+    "title": "wx：wx-charts",
+    "introduce": "微信小程序图表charts组件，Charts for WeChat small app",
+    "url": "https://github.com/xiaolin3303/wx-charts"
+  }, {
+    "title": "wx：ColorUi",
+    "introduce": "鲜亮的高饱和色彩，专注视觉的小程序组件库",
+    "url": "https://github.com/weilanwl/ColorUI"
   }]
 }
