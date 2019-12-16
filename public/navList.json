@@ -361,16 +361,16 @@
     "introduce": "一套高质量的微信小程序 UI 组件库",
     "url": "http://inmap.talkingdata.com/wx/index_prod.html"
   }, {
-    "title": "wx：微信图表，CHCharts",
-    "introduce": "一款用于微信小程序开发中的图表组件，使用者可以快速添加并集成到微信小程序开发中",
-    "url": "https://github.com/chmini-app/CHCharts-wechat"
-  }, {
-    "title": "wx：wx-charts",
-    "introduce": "微信小程序图表charts组件，Charts for WeChat small app",
-    "url": "https://github.com/xiaolin3303/wx-charts"
-  }, {
     "title": "wx：ColorUi",
     "introduce": "鲜亮的高饱和色彩，专注视觉的小程序组件库",
     "url": "https://github.com/weilanwl/ColorUI"
+  }, {
+    "title": "wx：wx-f2",
+    "introduce": "F2 微信小程序图表 Demo",
+    "url": "https://github.com/antvis/wx-f2"
+  }, {
+    "title": "wx：f2-canvas",
+    "introduce": "微信小程序 F2 自定义图表组件",
+    "url": "https://github.com/simaQ/f2-canvas"
   }]
 }
