@@ -372,5 +372,17 @@
     "title": "wx：f2-canvas",
     "introduce": "微信小程序 F2 自定义图表组件",
     "url": "https://github.com/simaQ/f2-canvas"
+  }, {
+    "title": "云凤蝶",
+    "introduce": "提供专业的云上建站服务，满足不同行业的个性化需求",
+    "url": "https://www.yunfengdie.com/intro"
+  }, {
+    "title": "mac文件压缩工具",
+    "introduce": "Open any archive in seconds",
+    "url": "https://theunarchiver.com/"
+  }, {
+    "title": "github-IP",
+    "introduce": "查看 github 相关地址的IP地址",
+    "url": "https://githubusercontent.com.ipaddress.com/"
   }]
 }
