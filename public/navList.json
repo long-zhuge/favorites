@@ -21,8 +21,8 @@
     "introduce": "可以把压缩后的代码进行格式化，也可以将代码进行压缩",
     "url": "http://tool.oschina.net/codeformat/css"
   }, {
-    "title": "css属性兼容查询",
-    "introduce": "可以查询到各种css属性在各种浏览器中的兼容问题",
+    "title": "API兼容查询",
+    "introduce": "可查询 css、js 的 API 的浏览器支持",
     "url": "http://caniuse.com/"
   }, {
     "title": "nodeJS中文社区",
