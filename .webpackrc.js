@@ -17,8 +17,8 @@ const config = {
     components: path.resolve(__dirname, 'src/components/'),
   },
   externals: {
-    // 'react': 'React',
-    // 'react-dom': 'ReactDOM',
+    'react': 'React',
+    'react-dom': 'ReactDOM',
     'bizcharts': 'BizCharts',
     // 'lodash': '_',
     '@babel/polyfill': 'window',
