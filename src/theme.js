@@ -1,5 +1,5 @@
-// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
 module.exports = {
-  // 'primary-color': '#10e99b',
-  // 'card-actions-background': '#f5f8fa',
+  // 'primary-color': '#f96',
+  'table-padding-vertical': '4px',
+  'table-padding-horizontal': '8px',
 };

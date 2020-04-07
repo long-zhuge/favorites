@@ -1,0 +1,409 @@
+[{
+  "title": "CODING",
+  "introduce": "Git代码托管是 Coding.net 基于 Java 自主研发的一款 Git 在线代码托管平台。 开发者可以将源代码通过 Git 命令托管到 Coding.net, 并且享受 Coding.net 提供的各种延伸工具，如 合并请求( Merge Request/Pull Request)，Line Notes，保护分支，代码阅读，Webhook 等。",
+  "url": "https://coding.net/pp"
+}, {
+  "title": "git攻略",
+  "introduce": "git相关安装，命令行等",
+  "url": "https://github.com/geeeeeeeeek/git-recipes/wiki"
+}, {
+  "title": "TinyPNG",
+  "introduce": "png图片压缩的一个好网站，结合“图片压缩”使用更好",
+  "url": "https://tinypng.com/"
+}, {
+  "title": "图片压缩",
+  "introduce": "png图片压缩的一个好网站，结合“TinyPNG”使用更好",
+  "url": "http://www.secaibi.com/tools/"
+}, {
+  "title": "在线代码格式化",
+  "introduce": "可以把压缩后的代码进行格式化，也可以将代码进行压缩",
+  "url": "http://tool.oschina.net/codeformat/css"
+}, {
+  "title": "API兼容查询",
+  "introduce": "可查询 css、js 的 API 的浏览器支持",
+  "url": "http://caniuse.com/"
+}, {
+  "title": "nodeJS中文社区",
+  "introduce": "一个非常专业的node中文社区",
+  "url": "https://cnodejs.org/"
+}, {
+  "title": "select2",
+  "introduce": "一个非常好用美观的下拉控件，支持非常多的功能，支持ajax数据的搜索等。详见demo以及api！！！",
+  "url": "https://select2.github.io/examples.html"
+}, {
+  "title": "velocity语法",
+  "introduce": "velocity语法大全，开发vm页面项目时，会使用到。。。",
+  "url": "http://www.360doc.com/content/12/0105/16/1007797_177482053.shtml"
+}, {
+  "title": "Javascript之继承（原型链方式）",
+  "introduce": "原型链,默认的原型,确定原型和实例的关系,谨慎的定义方法",
+  "url": "http://www.cnblogs.com/zxj159/archive/2013/05/21/3091572.html"
+}, {
+  "title": "html特殊字符编码对照表",
+  "introduce": "一些你能用的到的特殊字符",
+  "url": "http://www.jb51.net/onlineread/htmlchar.htm"
+}, {
+  "title": "html5标签速查",
+  "introduce": "h5的各种标签",
+  "url": "http://www.inmotionhosting.com/img/infographics/html5_cheat_sheet_tags.png"
+}, {
+  "title": "viewer图片查看器插件",
+  "introduce": "支持移动，缩放，翻转等功能。支持移动设备。依赖：jQuery",
+  "url": "http://www.htmleaf.com/jQuery/Image-Effects/201509032517.html"
+}, {
+  "title": "json解析",
+  "introduce": "json校验，格式判断，解析，格式化等",
+  "url": "http://json.cn/"
+}, {
+  "title": "AntV（包含：g2、g6、f2 等）",
+  "introduce": "AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。",
+  "url": "https://antv.alipay.com/zh-cn/index.html"
+}, {
+  "title": "CDN缓存机制",
+  "introduce": "用户在浏览网站的时候，CDN会选择一个离用户最近的CDN边缘节点来响应用户的请求，这样海南移动用户的请求就不会千里迢迢跑到北京电信机房的服务器（假设源站部署在北京电信机房）上了。",
+  "url": "https://www.qcloud.com/doc/product/228/CDN%E7%BC%93%E5%AD%98%E9%82%A3%E4%BA%9B%E4%BA%8B"
+}, {
+  "title": "console的各种姿势",
+  "introduce": "现在，我们来研究下，console都有哪些神奇好玩的功能。",
+  "url": "http://web.jobbole.com/86277/"
+}, {
+  "title": "nodeJS视频教学",
+  "introduce": "对于初学者来说，这还是比较好的，虽然里面的老师说话有时候自己都很懵逼，但是还是挺有趣的",
+  "url": "http://www.icoolxue.com/play/1573"
+}, {
+  "title": "webpack傻瓜教程",
+  "introduce": "webpack是近期最火的一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理",
+  "url": "http://www.jianshu.com/p/42e11515c10f"
+}, {
+  "title": "前端开发面试题",
+  "introduce": "各种虐人心的面试题",
+  "url": "https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers"
+}, {
+  "title": "Ant Design 3.x",
+  "introduce": "Ant Design",
+  "url": "https://3x.ant.design/docs/react/introduce-cn"
+}, {
+  "title": "Ant Design 4.x",
+  "introduce": "Ant Design",
+  "url": "https://ant-design.gitee.io/components/button-cn/"
+}, {
+  "title": "egg",
+  "introduce": "Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和开发人员降低开发和维护成本。",
+  "url": "https://eggjs.org/"
+}, {
+  "title": "Flex 布局教程",
+  "introduce": "不管是什么布局，Flex可以几行命令就能搞定，就是这么牛逼，赶紧get起来",
+  "url": "http://www.ruanyifeng.com/blog/2015/07/flex-examples.html"
+}, {
+  "title": "ES6入门",
+  "introduce": "阮一峰的es6教程，非常详细，还有es5对比。",
+  "url": "http://es6.ruanyifeng.com/#README"
+}, {
+  "title": "Promise",
+  "introduce": "Promise迷你书，攻略",
+  "url": "http://liubin.org/promises-book/"
+}, {
+  "title": "Airbnb JavaScript Style Guide",
+  "introduce": "用更合理的方式写 JavaScript",
+  "url": "https://github.com/sivan/javascript-style-guide/blob/master/es5/README.md"
+}, {
+  "title": "react-dnd",
+  "introduce": "react 拖拽组件，demo 演示等",
+  "url": "http://react-dnd.github.io/react-dnd/"
+}, {
+  "title": "一起学习node.js",
+  "introduce": "安装，知识点讲解，模块分析，环境搭建，博客搭建等一体的好资料。",
+  "url": "https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb"
+}, {
+  "title": "antd-design一键式建站",
+  "introduce": "开箱即用的中台前端/设计解决方案",
+  "url": "https://github.com/ant-design/ant-design-pro"
+}, {
+  "title": "Nunjuck",
+  "introduce": "A rich and powerful templating language for JavaScript",
+  "url": "https://mozilla.github.io/nunjucks/"
+}, {
+  "title": "百度统计",
+  "introduce": "百度统计是百度推出的一款免费的专业网站流量分析工具，能够告诉用户访客是如何找到并浏览用户的网站，在网站上做了些什么，有了这些信息，可以帮助用户改善访客在用户的网站上的使用体验，不断提升网站的投资回报率",
+  "url": "https://tongji.baidu.com/web/welcome/login"
+}, {
+  "title": "BizCharts",
+  "introduce": "基于 G2 React 图表库，使用简单、扩展能力强，绝大部分图表都能够能过 BizCharts 表达。",
+  "url": "https://alibaba.github.io/BizCharts/index.html"
+}, {
+  "title": "语雀文档",
+  "introduce": "语雀是一款知识创作工具，通过它你可与团队一起编写文档、交流想法、沉淀知识，让企业、团队、个人轻松拥有自己的在线知识库",
+  "url": "http://yuque.com/"
+}, {
+  "title": "react native",
+  "introduce": "React Native使你能够在Javascript和React的基础上获得完全一致的开发体验，构建世界一流的原生APP",
+  "url": "https://reactnative.cn/"
+}, {
+  "title": "react native app 从零到放弃",
+  "introduce": "教你如何开发一款 RN APP",
+  "url": "https://www.jianshu.com/p/fa0874be0827"
+}, {
+  "title": "iconfont",
+  "introduce": "阿里妈妈MUX倾力打造的矢量图标管理、交流平台。",
+  "url": "http://www.iconfont.cn/"
+}, {
+  "title": "dva",
+  "introduce": "基于 redux、redux-saga 和 react-router 的轻量级前端框架，作者@sorrycc",
+  "url": "https://github.com/dvajs/dva/blob/master/README_zh-CN.md"
+}, {
+  "title": "Moment.js 文档",
+  "introduce": "JavaScript 日期处理类库",
+  "url": "http://momentjs.cn/docs/"
+}, {
+  "title": "Babel",
+  "introduce": "babel 入门教程，包括 node 环境编译，浏览器编译，如何配置等",
+  "url": "http://www.ruanyifeng.com/blog/2016/01/babel.html"
+}, {
+  "title": "Egg Restapi Module Tool",
+  "introduce": "基于 Egg+antd+dva 实现的框架",
+  "url": "https://github.com/fomenyesu/egg-restapi-module-tool"
+}, {
+  "title": "AntdPro style theme css default",
+  "introduce": "antd pro theme for default.less",
+  "url": "https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less"
+}, {
+  "title": "阿里云服务",
+  "introduce": "就是一个云服务，你懂的",
+  "url": "https://www.aliyun.com/"
+}, {
+  "title": "nodejs 入门视频教学",
+  "introduce": "一个免费的视频教学",
+  "url": "https://nodelover.me/course/nodejs"
+}, {
+  "title": "WEEX 官网",
+  "introduce": "Weex 是一个使用 Web 开发体验来开发高性能原生应用的框架。",
+  "url": "http://weex.apache.org/cn/guide/index.html"
+}, {
+  "title": "Canvas 学习",
+  "introduce": "别人家的笔记",
+  "url": "http://www.cnblogs.com/chengduxiaoc/p/7649048.html"
+}, {
+  "title": "Charles 调试手机数据请求",
+  "introduce": "以前使用 Fiddler 进行 web 调试的时候，可以玩转线上各种数据请求，并且替换掉数据，本地改改就可以调试线上内容了。那时候我应该还在大学里，用的是 window 和 firefox，需要兼容像  IE 6 这样的顽固浏览器。",
+  "url": "https://yuque.com/pizn/essay/wwak9x"
+}, {
+  "title": "Webpack 4 配置最佳实践",
+  "introduce": "Webpack 4 在配置上带来了哪些便利？要迁移需要修改配置文件的哪些内容？",
+  "url": "https://yuque.com/mayiprototeam/gfyt69/md2i2s"
+}, {
+  "title": "Canvas: Draw on the web",
+  "introduce": "今后的一个月内会连载详细的Canvas教程，从零基础开始",
+  "url": "https://yuque.com/airing/canvas/01"
+}, {
+  "title": "线性代数-数学",
+  "introduce": "在这个课程里面，主讲者介绍了线性代数的很多内容，包括：矩阵，线性方程组，向量及其运算，向量空间，子空间，零空间，变换，秩与维数，正交化，特征值与特征向量，等等。以上这些内容是线性代数的关键内容，它们也被广泛地应用到现代科学当中",
+  "url": "http://open.163.com/special/Khan/linearalgebra.html"
+}, {
+  "title": "canvas-五子棋",
+  "introduce": "原生 JS + canvas 实现五子棋对战，AI 机器人对战等。。",
+  "url": "https://www.cnblogs.com/wj204/p/7045068.html"
+}, {
+  "title": "常见排序算法之 js 实现",
+  "introduce": "排序算法是基础算法。虽然关键在于算法的思想而不是语言，但还是决定借助算法可视化工具结合自己常用的语言实现一遍",
+  "url": "https://zhuanlan.zhihu.com/p/28130533"
+}, {
+  "title": "命名神器",
+  "introduce": "可以提供命名参考，是根据 github 上他人的命名进行匹配",
+  "url": "http://unbug.github.io/codelf/"
+}, {
+  "title": "Technical Committee 39，TC39",
+  "introduce": "一个推动JavaScript发展的委员会，所有的提案都需要大多数人通过，提案从 Stage 0 - 4",
+  "url": "https://github.com/tc39/proposals"
+}, {
+  "title": "TypeScript 攻略",
+  "introduce": "TypeScript语言用于大规模应用的JavaScript开发",
+  "url": "https://github.com/zhongsp/TypeScript"
+}, {
+  "title": "D3.js",
+  "introduce": "D3.js is a JavaScript library for manipulating documents based on data. ",
+  "url": "https://d3js.org/"
+}, {
+  "title": "umiJS",
+  "introduce": "Pluggable enterprise-level react application framework",
+  "url": "https://github.com/umijs/umi"
+}, {
+  "title": "codesandbox",
+  "introduce": "代码演示平台",
+  "url": "https://codesandbox.io/s/x03lj5044"
+}, {
+  "title": "xclient",
+  "introduce": "mac必备软件推荐，精品",
+  "url": "http://xclient.info"
+}, {
+  "title": "bpmn.io",
+  "introduce": "Rendering toolkits and editors for BPMN 2.0, CMMN and DMN。建模工具包",
+  "url": "https://github.com/bpmn-io"
+}, {
+  "title": "bpmn.io 论坛",
+  "introduce": "有问题可以在这里寻找答案",
+  "url": "https://forum.bpmn.io/"
+}, {
+  "title": "iview",
+  "introduce": "一套基于 Vue.js 的高质量 UI 组件库",
+  "url": "https://www.iviewui.com/"
+}, {
+  "title": "react cropper",
+  "introduce": "react 版的图片剪裁",
+  "url": "https://github.com/DominicTobias/react-image-crop"
+}, {
+  "title": "Ant Design vue",
+  "introduce": "基于 Ant Design 开源组件开发的 vue 版本",
+  "url": "https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce/"
+}, {
+  "title": "WebStorm 破解注册码",
+  "introduce": "需要修改 hosts 文件",
+  "url": "http://idea.lanyus.com/"
+}, {
+  "title": "travis ci",
+  "introduce": "配合 github pages 进行自动化构建",
+  "url": "https://www.travis-ci.org"
+}, {
+  "title": "chrome 扩展开发教程",
+  "introduce": "扩展极客",
+  "url": "https://www.cnblogs.com/champagne/default.html"
+}, {
+  "title": "vue 从入门到放弃",
+  "introduce": "网盘视频 mp4",
+  "url": "https://pan.baidu.com/s/1PlIMF-oy6K33aVP4EP55bg#list/path=%2F&parentPath=%2Fsharelink2135785460-202492715537704"
+}, {
+  "title": "nsfwjs（鉴黄）",
+  "introduce": "一个简单的javascript库，帮助您快速识别不合适的图像；所有这些都在客户机的浏览器中。NSFWJS并不完美，但它相当准确（大约90%来自15000张测试图像的测试集）。它一直在变得更精确",
+  "url": "https://github.com/infinitered/nsfwjs"
+}, {
+  "title": "google 学术镜像网",
+  "introduce": "仅供查资料使用，请忽查询敏感词",
+  "url": "http://ac.scmor.com/"
+}, {
+  "title": "Rax",
+  "introduce": "A universal React-compatible render engine",
+  "url": "https://alibaba.github.io/rax/"
+}, {
+  "title": "antd color",
+  "introduce": "Colors",
+  "url": "https://ant.design/docs/spec/colors"
+}, {
+  "title": "react markdown",
+  "introduce": "Renders Markdown as pure React components.",
+  "url": "https://github.com/rexxars/react-markdown"
+}, {
+  "title": "提问的艺术",
+  "introduce": "本文原文由知名 Hacker Eric S. Raymond 所撰寫，教你如何正確的提出技術問題並獲得你滿意的答案",
+  "url": "https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way"
+}, {
+  "title": "API管理平台",
+  "introduce": "完全开源、免费的API协作管理系统",
+  "url": "http://api.crap.cn/"
+}, {
+  "title": "HOMEBREW",
+  "introduce": "macOs 软件包管理",
+  "url": "https://brew.sh/index_zh-cn"
+}, {
+  "title": "mebook",
+  "introduce": "精品电子书，而且还是免费下载",
+  "url": "http://mebook.cc"
+}, {
+  "title": "sobooks",
+  "introduce": "精品电子书，而且还是免费下载",
+  "url": "https://sobooks.cc/"
+}, {
+  "title": "临时邮箱",
+  "introduce": "填写邮箱时候，不想使用您的真实邮箱？那就使用24mail.chacuo.net 临时邮箱。不需要注册，邮箱持续24小时",
+  "url": "http://24mail.chacuo.net/"
+}, {
+  "title": "在线工具集",
+  "introduce": "各种各样的小工具，如PDF转化、JSON转化、Linux常用命令等等",
+  "url": "https://www.toolfk.com/"
+}, {
+  "title": "chrome插件网",
+  "introduce": "网络被强？试试这个吧。。",
+  "url": "http://www.cnplugins.com/"
+}, {
+  "title": "gitlab部署",
+  "introduce": "私有化部署教程",
+  "url": "https://www.jianshu.com/p/b04356e014fa"
+}, {
+  "title": "webpack-大漠",
+  "introduce": "@大漠 的实战文章，介绍17步了解配置",
+  "url": "https://www.w3cplus.com/javascript/webpack-config-part1.html"
+}, {
+  "title": "td-antd",
+  "introduce": "基于 ant design 二次开发的组件",
+  "url": "http://td-antd.zhugelong.cn/"
+}, {
+  "title": "wx：微信开发者文档",
+  "introduce": "微信（wx）",
+  "url": "https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html"
+}, {
+  "title": "wx：微信公众号平台",
+  "introduce": "微信（wx）",
+  "url": "https://mp.weixin.qq.com/"
+}, {
+  "title": "ProcessOn",
+  "introduce": "免费在线作图，实时协作，流程图",
+  "url": "https://www.processon.com"
+}, {
+  "title": "自由钢琴",
+  "introduce": "网页版在线学习钢琴",
+  "url": "https://www.autopiano.cn/"
+}, {
+  "title": "奶牛快递",
+  "introduce": "网页版传文件，可加密",
+  "url": "https://cowtransfer.com/"
+}, {
+  "title": "现代 JavaScript 教程",
+  "introduce": "以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。",
+  "url": "https://zh.javascript.info"
+}, {
+  "title": "wx：iView Weapp",
+  "introduce": "一套高质量的微信小程序 UI 组件库",
+  "url": "http://inmap.talkingdata.com/wx/index_prod.html"
+}, {
+  "title": "wx：ColorUi",
+  "introduce": "鲜亮的高饱和色彩，专注视觉的小程序组件库",
+  "url": "https://github.com/weilanwl/ColorUI"
+}, {
+  "title": "wx：wx-f2",
+  "introduce": "F2 微信小程序图表 Demo",
+  "url": "https://github.com/antvis/wx-f2"
+}, {
+  "title": "wx：f2-canvas",
+  "introduce": "微信小程序 F2 自定义图表组件",
+  "url": "https://github.com/simaQ/f2-canvas"
+}, {
+  "title": "云凤蝶",
+  "introduce": "提供专业的云上建站服务，满足不同行业的个性化需求",
+  "url": "https://www.yunfengdie.com/intro"
+}, {
+  "title": "mac文件压缩工具",
+  "introduce": "Open any archive in seconds",
+  "url": "https://theunarchiver.com/"
+}, {
+  "title": "github-IP",
+  "introduce": "查看 github 相关地址的IP地址",
+  "url": "https://githubusercontent.com.ipaddress.com/"
+}, {
+  "title": "英语-从入门到放弃",
+  "introduce": "重头开始学英语，零基础语法入门",
+  "url": "https://www.bilibili.com/video/av2639206/"
+}, {
+  "title": "css动画的常用套路",
+  "introduce": "本文是笔者写CSS时常用的套路。不论效果再怎么华丽，万变不离其宗",
+  "url": "https://mp.weixin.qq.com/s/dYCWYeM629DwiSqmaaAs1w"
+}, {
+  "title": "react-router",
+  "introduce": "官方文档",
+  "url": "https://reacttraining.com/react-router/web/guides/philosophy"
+}, {
+  "title": "eslint",
+  "introduce": "可以查看错误信息",
+  "url": "https://npm.taobao.org/package/eslint-plugin-jsx-a11y"
+}, {
+  "title": "Taro",
+  "introduce": "是一套遵循 React 语法规范的 多端开发 解决方案",
+  "url": "https://nervjs.github.io/taro/docs/README.html"
+}]

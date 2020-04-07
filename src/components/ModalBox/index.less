@@ -1,0 +1,29 @@
+.modalBox {
+  :global {
+    .ant-modal-body {
+      // 在模态框中支持overflow，不至于内容太多往下拖动很长
+      max-height: 520px;
+      overflow-y: auto;
+      padding: 10px 16px;
+    }
+  }
+
+  .title {
+    display: flex;
+    line-height: 22px;
+  }
+
+  .title_extra {
+    margin-left: 24px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.footerCenter {
+  :global {
+    .ant-modal-footer {
+      text-align: center;
+    }
+  }
+}

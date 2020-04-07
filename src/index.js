@@ -1,31 +1,27 @@
+import '@babel/polyfill';
+import 'url-polyfill';
 import dva from 'dva';
-import browserHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import createLoading from 'dva-loading';
 import 'moment/locale/zh-cn';
-import models from './models';
-import './polyfill';
+import './rollbar';
 import './index.less';
 
 // 1. Initialize
 const app = dva({
-  history: browserHistory(),
+  history: createBrowserHistory(),
 });
 
 // 2. Plugins
-app.use(createLoading()); // 全局loading
+app.use(createLoading());
 
-// 3. Model move to router
-models.forEach((m) => {
-  app.model(m);
-});
+// 3. Register global model
+app.model(require('./models/global').default);
 
 // 4. Router
-app.router(require('./router'));
+app.router(require('./router').default);
 
 // 5. Start
 app.start('#root');
 
-// 将 app 挂载到 window 对象上，方便其他应用调用
-window.App = app;
-// eslint-disable-next-line
-window.App_store = app._store;
+export default app._store; // eslint-disable-line

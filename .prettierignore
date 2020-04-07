@@ -1,0 +1,6 @@
+**/*.md
+**/*.svg
+**/*.html
+**/*.ejs
+**/*.js
+package.json

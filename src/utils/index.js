@@ -1,72 +1,94 @@
+import { message } from 'antd';
+import moment from 'moment';
+import AppStore from '../index';
+
+export function getRoutes(path, routerData) {
+  let routes = Object.keys(routerData).filter(
+    routePath => routePath.indexOf(path) === 0 && routePath !== path
+  );
+  routes = routes.map(item => item.replace(path, ''));
+  return routes.map(item => {
+    return {
+      exact: true,
+      ...routerData[`${path}${item}`],
+      key: `${path}${item}`,
+      path: `${path}${item}`,
+    };
+  });
+}
+
+/* eslint no-useless-escape:0 */
+const reg = /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/g;
+
+export function isUrl(path) {
+  return reg.test(path);
+}
+
+// /userinfo/2144/id => ['/userinfo','/useinfo/2144,'/userindo/2144/id']
+export function urlToList(url) {
+  const urllist = url.split('/').filter(i => i);
+  return urllist.map((urlItem, index) => {
+    return `/${urllist.slice(0, index + 1).join('/')}`;
+  });
+}
+
 /*
-* 全局工具包
+* yield 队列的延迟，默认时间 2000ms
+* 调用方式：
+*   Generator：yield delay(1000)
+*   fun：delay(1000).then(() => console.log('success'));
 * */
 
-import cloneDeep from 'lodash/cloneDeep';
-import { message } from 'antd';
-import navData from '../common';
-
-// 重写数组实例的 includes()，匹配是否成功，返回：true/false
-export function includes(arr, value) {
-  return Array.prototype.includes ? arr.includes(value) : arr.some(el => el === value);
-}
-
-// 子路由解析
-function getPlainNode(nodeList, parentPath = '') {
-  const arr = [];
-  nodeList.forEach((node) => {
-    const item = node;
-    item.path = `${parentPath}/${item.path || ''}`.replace(/\/+/g, '/');
-    item.menu = parentPath;
-    item.exact = true;
-    if (item.children && !item.component) {
-      arr.push(...getPlainNode(item.children, item.path));
-    } else {
-      if (item.children && item.component) {
-        item.exact = false;
-      }
-      arr.push(item);
-    }
+export function delay(time = 2000) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
   });
-  return arr;
-}
-
-// 路由解析
-export function getRouteData(path = 'BasicLayout') {
-  if (!navData.some(item => item.layout === path) ||
-    !(navData.filter(item => item.layout === path)[0].children)) {
-    return null;
-  }
-  const dataList = cloneDeep(navData.filter(item => item.layout === path)[0]);
-  const nodeList = getPlainNode(dataList.children);
-  const routerList = [];
-
-  nodeList.forEach((item) => {
-    routerList.push({
-      ...item,
-      exact: true,
-      menu: item.path,
-    });
-    if (item.children) {
-      routerList.push(...getPlainNode(item.children, item.path));
-    }
-  });
-
-  return routerList.length > 0 ? routerList : nodeList;
 }
 
 // 全局 toast 提示
-// type: [success, error, warning]
-export function toast(type, text, time = 3) {
-  return message[type](text, time);
+// type: [success, error, warning, loading]
+message.config({maxCount: 1});
+export function toast(props) {
+  const {
+    type = 'success',
+    text = '',
+    time = 3,
+    cb = () => {},
+  } = props;
+  const hide = message[type](text, time);
+  cb(hide);
+  return hide;
+}
+
+// 组件内封的 fetch 请求需要有一个超时返回登录态的功能
+export function loginTimeOut(data) {
+  if (data && ['DENY', 'UNLOGIN'].includes(data.errorCode)) {
+    // 判断当前是否已经弹窗提示，防止多次 dispatch
+    const msgEle = document.getElementsByClassName('ant-message-notice');
+    const { pathname, search } = window.location;
+    if (msgEle.length === 0) {
+      toast({ type: 'error', text: '登录超时，请重新登录' });
+      // 当在登录页面发生登录超时，不再进行重定向
+      if (!(pathname.includes('login'))) {
+        delay(1000).then(() => {
+          AppStore.dispatch({
+            type: 'global/GOTO',
+            payload: `/user/login?go=${pathname}${search}`,
+          });
+        });
+      }
+    }
+    return false;
+  }
+  return data;
 }
 
 // 字符串url链接获取参数
 export function getUrlParameter(name, link = window.location.href) {
-  let url = link;
-  url = url.slice(url.indexOf('?'), url.length);
-  const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`);
-  const r = url.substr(1).match(reg);
+  const url = link.slice(link.indexOf('?'), link.length);
+  const r = url.substr(1).match(new RegExp(`(^|&)${name}=([^&]*)(&|$)`));
 
   if (r !== null) {
     return unescape(r[2]);
@@ -75,29 +97,93 @@ export function getUrlParameter(name, link = window.location.href) {
   return null;
 }
 
-// 获取缓存信息
-export function getSession() {
-  const { session } = window.sessionStorage;
-
-  return session ? JSON.parse(session) : {};
-}
-
-// 获取-cookie
-export function getCookie(cookieName) {
-  const name = `${cookieName}=`;
-  const cookies = document.cookie.split(';');
-  // eslint-disable-next-line
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim();
-    if (cookie.indexOf(name) === 0) {
-      return cookie.substring(name.length, cookie.length);
+// 获取 url 参数集合
+export function getUrlParams(url) {
+  const d = decodeURIComponent;
+  let queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+  const obj = {};
+  if (queryString) {
+    queryString = queryString.split('#')[0]; // eslint-disable-line
+    const arr = queryString.split('&');
+    for (let i = 0; i < arr.length; i += 1) {
+      const a = arr[i].split('=');
+      let paramNum;
+      const paramName = a[0].replace(/\[\d*\]/, (v) => {
+        paramNum = v.slice(1, -1);
+        return '';
+      });
+      const paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+      if (obj[paramName]) {
+        if (typeof obj[paramName] === 'string') {
+          obj[paramName] = d([obj[paramName]]);
+        }
+        if (typeof paramNum === 'undefined') {
+          obj[paramName].push(d(paramValue));
+        } else {
+          obj[paramName][paramNum] = d(paramValue);
+        }
+      } else {
+        obj[paramName] = d(paramValue);
+      }
     }
   }
-
-  return '';
+  return obj;
 }
 
+
 // 生产随机数，可指定位数
-export function genNonDuplicateID(length) {
-  return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
+export function genNonDuplicateID(length = 2) {
+  return Math.random().toString(16).substring(2, length + 2);
+}
+
+/*
+* moment 和 dateString 之间的转化
+* API: {
+*   value: 值
+*   isMoment: 是否转化成 string，默认 是
+*   format: 转化格式，YYYY-MM-DD HH:mm:ss
+* }
+* */
+export function mmtToStr(value, isMoment = true, format = 'YYYY-MM-DD') {
+  if (value) {
+    if (isMoment) {
+      return moment.isMoment(value) ? value.format(format) : moment(value).format(format);
+    }
+
+    return moment(value, format);
+  }
+}
+
+// 数字千位符过滤，补充后面的小数点
+export function toThousands(value, isFormatter = true) {
+  // 将字符转成千位符
+  if (isFormatter) {
+    return `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  // 将千位符转成普通数字
+  return value.replace(/\$\s?|(,*)/g, '');
+}
+
+// Table 列表的翻页组件数据
+export const pagination = (data, cb, ...props) => {
+  return {
+    ...props,
+    hideOnSinglePage: true,
+    current: data.pageNum || data.currPageNo || 1,
+    pageSize: data.pageSize || data.limit || 20,
+    total: data.totalCnt || data.total || 1,
+    onChange: cb,
+  };
+};
+
+/*
+* 无刷新改变地址栏
+* API：{
+*   url: 需要改变的地址栏，默认是当前无参数地址url
+*   isBack: 是否需要回跳状态
+* }
+* */
+export function historyState(url = `${window.location.origin}${window.location.pathname}`, isBack = false) {
+  window.history[isBack ? 'pushState' : 'replaceState'](Date.now(),'', url);
 }

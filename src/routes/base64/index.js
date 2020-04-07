@@ -1,33 +1,35 @@
-import React from 'react';
-import { connect } from 'dva';
+import React, { useState, useEffect } from 'react';
 import { Button, message } from 'antd';
 import styles from './index.less';
 
-class Base64 extends React.Component {
-  state = {
-    text: '',
-  };
+export default () => {
+  const [loading, setLoading] = useState(false);
+  const [text, setText] = useState(false);
 
-  onChange = (e) => {
-    const that = this;
+  useEffect(() => {}, []);
+
+  const onChange = (e) => {
     const file = e.currentTarget.files[0];
-    const reader = new FileReader();
+    if (file) {
+      if ((file.size / 1048576) > 2) {
+        message.error(`文件大小不能超过 2MB：${file.name}`);
+        return;
+      }
 
-    // eslint-disable-next-line
-    reader.onload = function(file) {
-      that.setState({
-        text: file.target.result,
+      setLoading(true);
+      uploadFile(file).then((res) => {
+        setText(res);
+        setLoading(false);
       });
-    };
-    reader.readAsDataURL(file);
+    }
   };
 
-  onCopy = () => {
-    document.addEventListener('copy', this.copyEvent);
+  const onCopy = () => {
+    document.addEventListener('copy', copyEvent);
 
     try {
       const msg = document.execCommand('copy');
-      document.removeEventListener('copy', this.copyEvent);
+      document.removeEventListener('copy', copyEvent);
 
       if (msg) {
         message.success('复制成功');
@@ -39,34 +41,38 @@ class Base64 extends React.Component {
     }
   };
 
-  copyEvent = (e) => {
-    const { text } = this.state;
+  const copyEvent = (e) => {
     e.clipboardData.setData('text/plain', text);
     e.preventDefault();
   };
 
-  render() {
-    const { text } = this.state;
+  const uploadFile = (file) => {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (f) => {
+        resolve(f.target.result);
+      };
+      reader.readAsDataURL(file);
+    })
+  };
 
-    return (
-      <React.Fragment>
-        <div className={styles.base64_submit}>
-          <div>
-            <Button><label htmlFor="file">提交转化</label></Button>
-            &nbsp;&nbsp;
-            <Button onClick={this.onCopy} disabled={text === ''}>复制</Button>
-            <input id="file" className="hidden" type="file" onChange={this.onChange} />
-          </div>
-          <div>功能介绍: 可以将你的文件转化为 base64 码。</div>
-          <div>PS: 转化文件需要消耗一些时间，并造成页面短暂卡死。文件越大，持续时间越长！！！</div>
+  return (
+    <React.Fragment>
+      <div className={styles.base64_submit}>
+        <div>
+          <Button loading={loading}><label htmlFor="file">提交转化</label></Button>
+          &nbsp;&nbsp;
+          <Button onClick={onCopy} disabled={text === ''}>复制</Button>
+          <input id="file" className="hidden" type="file" onChange={onChange} />
         </div>
-        <div className={styles.base64_text}>
-          { text }
+        <div className={styles.tip}>
+          功能介绍: 可以将你的文件转化为 base64 码。<br />
+          PS: 转化文件需要消耗一些时间，并造成页面短暂卡死。文件越大，持续时间越长！！！
         </div>
-      </React.Fragment>
-    );
-  }
+      </div>
+      <div className={styles.base64_text}>
+        { text }
+      </div>
+    </React.Fragment>
+  );
 }
-
-// 关联 model
-export default connect()(Base64);

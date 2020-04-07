@@ -1,3 +1,11 @@
+_roadhog-api-doc
+/vscode
+yarn-error.log
+/coverage
+yarn.lock
+package-lock.json
+*bak
+.vscode/settings.json
 .DS_Store
 logs
 *.log
@@ -16,4 +24,8 @@ jspm_packages
 .idea
 .idea/*
 /src/utils/request-temp.js
+*.zip
+jsconfig.json
+.prettierrc
 dist
+dist/*

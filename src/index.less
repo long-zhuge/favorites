@@ -3,14 +3,84 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #fff;
   }
 
   .hidden {
-    display: none;
+    display: none !important;
+  }
+
+  .submit_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+    button {
+      margin: 0 5px;
+    }
+  }
+
+  .btn_parent {
+    button {
+      margin-right: 15px;
+    }
+  }
+
+  .btn_search {
+    button {
+      margin-left: 30px;
+    }
   }
 
   a:focus {
-    text-decoration: none;
+    text-decoration: none !important;
+  }
+
+  .tableListForm {
+    :global {
+      .ant-form-item {
+        margin-bottom: 12px !important;
+        margin-right: 24px !important;
+        display: flex !important;
+        > .ant-form-item-label {
+          width: auto;
+          line-height: 32px;
+        }
+        .ant-form-item-control {
+          line-height: 32px;
+        }
+      }
+      .ant-form-item-control-wrapper {
+        flex: 1;
+      }
+    }
+  }
+
+  .ant-table-pagination.ant-pagination {
+    margin: 10px 0 !important;
+  }
+
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    padding: 6px 0 6px 25px !important;
+
+    .arrow {
+      left: 6px !important;
+      line-height: 34px !important;
+    }
+  }
+
+  // 删除 table 组件中嵌入 form 表单时出现 margin-bottom 问题
+  .table-form-input {
+    .ant-form-item {
+      margin: 0;
+    }
+  }
+
+  .h3-title {
+    padding-top: 20px;
+  }
+
+  .label {
+    color: rgba(0, 0, 0, .85);
   }
 }

@@ -1,27 +1,18 @@
-/*
-* 首页，搜索各种链接等
-* */
-
-import React from 'react';
-import { connect } from 'dva';
+import React, { useState, useEffect, useRef } from 'react';
 import { Input } from 'antd';
-import { HOME_NAMESPACE } from '../../actions/home';
+import cloneDeep from 'lodash/cloneDeep'
 
-class SearchInput extends React.Component {
-  onSearch = (e) => {
-    // 拷贝原始数据
-    const { dispatch } = this.props;
-    const data = window.DATALIST.concat();
+export default (props) => {
+  const { dataSource = [], callback = () => {} } = props;
+
+  const onSearch = (e) => {
     const { value } = e.target;
+    const data = cloneDeep(dataSource);
     const reg = new RegExp(value, 'gi');
 
     if (value.trim() !== '') {
       if (value === '19910605') {
-        // todo: 这里是要写情书的地方。
-        dispatch({
-          type: 'GLOBAL/GOTO',
-          payload: '/love',
-        });
+        // 写情书的地方
         return;
       }
 
@@ -40,34 +31,17 @@ class SearchInput extends React.Component {
         }
       });
 
-      dispatch({
-        type: `${HOME_NAMESPACE}/setData`,
-        payload: { data: arr },
-      });
+      callback(arr);
     } else {
-      dispatch({
-        type: `${HOME_NAMESPACE}/setData`,
-        payload: { data },
-      });
+      callback(data);
     }
   };
 
-  render() {
-    return (
-      <Input.Search
-        style={{ width: 200 }}
-        placeholder="同学，来搜一发"
-        onInput={this.onSearch}
-      />
-    );
-  }
+  return (
+    <Input.Search
+      style={{ width: 200 }}
+      placeholder="同学，来搜一发"
+      onInput={onSearch}
+    />
+  );
 }
-
-// 监听属性，建立组件和数据的映射关系
-function mapStateToProps(state) {
-  const { data } = state[HOME_NAMESPACE];
-  return { data };
-}
-
-// 关联 model
-export default connect(mapStateToProps)(SearchInput);

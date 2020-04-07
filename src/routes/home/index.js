@@ -1,37 +1,17 @@
-import React from 'react';
-import { connect } from 'dva';
-import { Spin } from 'antd';
-import { HOME_NAMESPACE, FETCH_LIST } from '../../actions/home';
+import React, { useState, useEffect } from 'react';
+import navList from './navList.json';
 import SearchInput from './SearchInput';
 import List from './List';
 
-class Home extends React.Component {
-  componentDidMount() {
-    if (!window.DATALIST) {
-      this.props.dispatch({
-        type: `${HOME_NAMESPACE}/${FETCH_LIST}`,
-      });
-    }
-  }
+export default () => {
+  const [searchData, setSearchData] = useState(null);
 
-  render() {
-    const { loading } = this.props;
+  useEffect(() => {}, []);
 
-    return (
-      <Spin spinning={loading}>
-        <SearchInput />
-        <List />
-      </Spin>
-    );
-  }
+  return (
+    <React.Fragment>
+      <SearchInput dataSource={navList} callback={(res) => { setSearchData(res) }} />
+      <List dataSource={searchData || navList} />
+    </React.Fragment>
+  );
 }
-
-// 监听属性，建立组件和数据的映射关系
-function mapStateToProps(state) {
-  return {
-    loading: state.loading.models[HOME_NAMESPACE],
-  };
-}
-
-// 关联 model
-export default connect(mapStateToProps)(Home);

@@ -1,14 +1,25 @@
 import React from 'react';
-import { Router, Route, Switch } from 'dva/router';
-import BasicLayout from './layouts/BasicLayout';
+import { router, routerRedux } from 'dva';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+import { getRouterData } from './common/router';
 
-function RouterConfig({ history }) {
+const { Route, Switch } = router;
+const { ConnectedRouter } = routerRedux;
+
+function RouterConfig({ history, app }) {
+  const routerData = getRouterData(app);
+  const UserLayout = routerData['/user'].component;
+  const BasicLayout = routerData['/'].component;
   return (
-    <Router history={history}>
-      <Switch>
-        <Route path="/" component={BasicLayout} />
-      </Switch>
-    </Router>
+    <ConfigProvider locale={zhCN}>
+      <ConnectedRouter history={history}>
+        <Switch>
+          <Route path="/user" component={UserLayout} />
+          <Route path="/" component={BasicLayout} />
+        </Switch>
+      </ConnectedRouter>
+    </ConfigProvider>
   );
 }
 

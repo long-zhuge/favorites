@@ -1,32 +1,47 @@
-/*
-* 全局页头部分
-* */
-
-import React from 'react';
-import { Layout, Row, Col } from 'antd';
-import { GLOBAL_TITLE } from '../../actions';
-import GlobalMenu from '../GlobalMenu';
-// import Thanks from './Thanks';
+import React, { useState } from 'react';
+import { useDispatch } from 'dva';
+import { Menu } from 'antd';
+import { ContentBox, BgMusic } from 'components';
 import styles from './index.less';
 
-function GlobalHeader(props) {
+export default (props) => {
+  const dispatch = useDispatch();
+  const [menuKey, setMenuKey] = useState(props.location.pathname);
+
+  const handleClick = (e) => {
+    setMenuKey(e.key);
+
+    dispatch({
+      type: 'global/GOTO',
+      payload: e.key,
+    });
+  };
+
   return (
-    <Layout.Header className={styles.header}>
-      <Row>
-        <Col span={3} className={styles.logo}>
-          <div className={styles.title}>
-            {GLOBAL_TITLE}
-            <div className={styles.line_wrapper}>
-              <div className={styles.line} />
-            </div>
+    <div className={styles.container}>
+      <ContentBox>
+        <div className={styles.header}>
+          <div className={styles.logo}>
+            FAVORITES
           </div>
-        </Col>
-        <Col span={19}>
-          <GlobalMenu routerItem={props.routerItem} />
-        </Col>
-      </Row>
-    </Layout.Header>
+          <Menu
+            className={styles.menu}
+            onClick={handleClick}
+            selectedKeys={[menuKey]}
+            mode="horizontal"
+          >
+            <Menu.Item key="/home">主页</Menu.Item>
+            <Menu.Item key="/base64">base64</Menu.Item>
+            {/*<Menu.Item key="/favorites/excel">excel</Menu.Item>*/}
+            <Menu.Item key="/qrcode">二维码</Menu.Item>
+            <Menu.Item key="/pdf">PDF</Menu.Item>
+            <Menu.Item key="/signature">签名</Menu.Item>
+            {/*<Menu.Item key="/favorites/markdown">markdown</Menu.Item>*/}
+            {/*<Menu.Item key="/favorites/chiHuang">图片鉴黄</Menu.Item>*/}
+          </Menu>
+          <BgMusic />
+        </div>
+      </ContentBox>
+    </div>
   );
 }
-
-export default GlobalHeader;
