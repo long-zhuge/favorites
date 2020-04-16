@@ -97,5 +97,9 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, [], () => import('../routes/signature')),
       name: 'signature',
     },
+    '/forge': {
+      component: dynamicWrapper(app, [], () => import('../routes/forge')),
+      name: 'forge',
+    },
   };
 };

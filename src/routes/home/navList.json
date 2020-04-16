@@ -410,4 +410,8 @@
   "title": "Flutter 中文网",
   "introduce": "Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面",
   "url": "https://flutterchina.club/"
+}, {
+  "title": "forge",
+  "introduce": "sha256等信息加密插件",
+  "url": "https://github.com/digitalbazaar/forge"
 }]

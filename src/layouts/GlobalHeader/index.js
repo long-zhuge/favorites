@@ -36,6 +36,7 @@ export default (props) => {
             <Menu.Item key="/qrcode">二维码</Menu.Item>
             <Menu.Item key="/pdf">PDF</Menu.Item>
             <Menu.Item key="/signature">签名</Menu.Item>
+            <Menu.Item key="/forge">加密</Menu.Item>
             {/*<Menu.Item key="/favorites/markdown">markdown</Menu.Item>*/}
             {/*<Menu.Item key="/favorites/chiHuang">图片鉴黄</Menu.Item>*/}
           </Menu>
