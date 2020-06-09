@@ -101,5 +101,9 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, [], () => import('../routes/forge')),
       name: 'forge',
     },
+    '/flip': {
+      component: dynamicWrapper(app, [], () => import('../routes/flip')),
+      name: 'flip',
+    },
   };
 };
