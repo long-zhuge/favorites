@@ -375,16 +375,6 @@
     "url": "https://brew.sh/index_zh-cn"
   },
   {
-    "title": "mebook",
-    "introduce": "精品电子书，而且还是免费下载",
-    "url": "http://mebook.cc"
-  },
-  {
-    "title": "sobooks",
-    "introduce": "精品电子书，而且还是免费下载",
-    "url": "https://sobooks.cc/"
-  },
-  {
     "title": "临时邮箱",
     "introduce": "填写邮箱时候，不想使用您的真实邮箱？那就使用24mail.chacuo.net 临时邮箱。不需要注册，邮箱持续24小时",
     "url": "http://24mail.chacuo.net/"
@@ -528,5 +518,15 @@
     "title": "mysql刷题",
     "introduce": "经典50题：可能是最通俗易懂的答案",
     "url": "https://zhuanlan.zhihu.com/p/150571462"
+  },
+  {
+    "title": "emoji大全",
+    "introduce": "找emoji来这里",
+    "url": "http://www.fhdq.net/emoji/emojifuhao.html"
+  },
+  {
+    "title": "Antd设计资源",
+    "introduce": "Sketch、Kitchen、Mobile、Axure",
+    "url": "https://3x.ant.design/docs/spec/download-cn"
   }
 ]
