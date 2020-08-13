@@ -4,23 +4,20 @@ import styles from './index.less';
 
 export default () => {
   const [loading, setLoading] = useState(false);
-  const [text, setText] = useState(false);
+  const [text, setText] = useState('');
 
   useEffect(() => {}, []);
 
   const onChange = (e) => {
     const file = e.currentTarget.files[0];
     if (file) {
-      if ((file.size / 1048576) > 2) {
-        message.error(`文件大小不能超过 2MB：${file.name}`);
-        return;
-      }
-
       setLoading(true);
       uploadFile(file).then((res) => {
         setText(res);
+        alert('解析成功')
+      }).finally(() => {
         setLoading(false);
-      });
+      })
     }
   };
 
@@ -49,7 +46,7 @@ export default () => {
   const uploadFile = (file) => {
     return new Promise((resolve) => {
       const reader = new FileReader();
-      reader.onload = (f) => {
+      reader.onloadend = (f) => {
         resolve(f.target.result);
       };
       reader.readAsDataURL(file);
@@ -67,12 +64,9 @@ export default () => {
         </div>
         <div className={styles.tip}>
           功能介绍: 可以将你的文件转化为 base64 码。<br />
-          PS: 转化文件需要消耗一些时间，并造成页面短暂卡死。文件越大，持续时间越长！！！
         </div>
       </div>
-      <div className={styles.base64_text}>
-        { text }
-      </div>
+      <img className={styles.img} src={text} alt="" />
     </React.Fragment>
   );
 }
