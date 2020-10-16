@@ -528,5 +528,10 @@
     "title": "Antd设计资源",
     "introduce": "Sketch、Kitchen、Mobile、Axure",
     "url": "https://3x.ant.design/docs/spec/download-cn"
+  },
+  {
+    "title": "jenkins-定时构建",
+    "introduce": "配置定时构建，scm轮训配置",
+    "url": "https://www.cnblogs.com/hong-fithing/p/10547176.html"
   }
 ]
