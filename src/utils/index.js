@@ -133,7 +133,7 @@ export function getUrlParams(url) {
 
 // 生产随机数，可指定位数
 export function genNonDuplicateID(length = 2) {
-  return Math.random().toString(16).substring(2, length + 2);
+  return Math.random().toString(32).substring(2, length + 2);
 }
 
 /*

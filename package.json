@@ -47,7 +47,8 @@
     "qrcode.react": "0.8.0",
     "react-pdf": "^4.1.0",
     "signature_pad": "3.0.0-beta.3",
-    "react-flip-move": "3.0.4"
+    "react-flip-move": "3.0.4",
+    "crypto-js": "^4.0.0"
   },
   "devDependencies": {
     "immutability-helper": "^2.6.6",
