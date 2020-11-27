@@ -1,25 +1,43 @@
 .container {
-  height: 60px;
+  height: 54px;
+  padding: 0 20px;
+  display: flex;
   background: #fff;
-}
-
-.header {
-  display: flex;
-  height: 100%;
-}
-
-.logo {
-  flex: 0 0 200px;
-  height: 100%;
-  display: flex;
   align-items: center;
-  font-size: 20px;
+  position: relative;
+
+  &:hover {
+    justify-content: space-between;
+
+    .title {
+      flex: 0 0 100px;
+      font-size: 20px;
+    }
+
+    .menus {
+      opacity: 1;
+    }
+  }
+}
+
+.title {
+  flex: 1;
   color: #49a9ee;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  transition: all .5s;
+}
+
+.menus {
+  transition: all .5s;
+  position: absolute;
+  right: 20px;
+  opacity: 0;
 }
 
 .menu {
   border: none;
-  margin-top: 7px;
 
   :global {
     .ant-menu-item {
