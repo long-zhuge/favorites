@@ -548,5 +548,10 @@
     "title": "72crm-论坛",
     "introduce": "",
     "url": "http://bbs.72crm.net/"
+  },
+  {
+    "title": "minio",
+    "introduce": "自建存储对象",
+    "url": "https://mp.weixin.qq.com/s/kvLZRqgm1lEITm1j6rzJ0A"
   }
 ]
