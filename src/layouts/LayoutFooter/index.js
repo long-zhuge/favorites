@@ -8,7 +8,7 @@ function LayoutFooter() {
         className={styles.link}
         target="_blank"
         rel="noopener noreferrer"
-        href="http://zj.beian.miit.gov.cn"
+        href="https://beian.miit.gov.cn"
       >
         浙ICP备20007224号
       </a>
